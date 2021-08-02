@@ -54,6 +54,7 @@ namespace L0002B_Uppgift2
         // getSeller - Hämta & Spara information
         static SELLER getSeller()
         {
+
             // Placeholder
             SELLER seller;
 
@@ -61,7 +62,7 @@ namespace L0002B_Uppgift2
             Console.WriteLine("Namn: ");
             seller.name = Console.ReadLine();
             Console.WriteLine("Personnummer: ");
-            seller.IDNum = Convert.ToInt32(Console.ReadLine());
+            seller.IDNum = Convert.ToInt64(Console.ReadLine());
             Console.WriteLine("Distrikt: ");
             seller.location = Console.ReadLine();
             Console.WriteLine("Försäljning: ");
@@ -117,7 +118,7 @@ namespace L0002B_Uppgift2
         static void Printer(long holder, SELLER[] SellerDB, int[] bonusDB)
         {
             // StreamWriter & Anger vart textfilen ska sparas
-            StreamWriter streamWriter = new StreamWriter("desktop");
+            StreamWriter streamWriter = new StreamWriter("C:\\Users\\laith\\test.txt");
 
             // Börjar med att loopa igenom databasen för säljaren
             // Formatterar så att outputten blir riktigt snygg.
@@ -160,5 +161,6 @@ namespace L0002B_Uppgift2
             // Slutar skriva till filen
             streamWriter.Close();
         } // Printer
+
     } // Program
 } // Namespace
